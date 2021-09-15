@@ -3,15 +3,23 @@ package com.bridgelabz.AddressBookSystem;
 import java.util.Scanner;
 
 public class App {
-	
+
 	public static void main(String[] args) {
 
-		addContacts();
-
+		System.out.println("***Welcome to Address Book System****");
+		System.out.println("Enter \n 1:Add Contact information \n 2:Edit Contact information \n 3:Remove Contact");
+		Scanner s = new Scanner(System.in);
+		int input = s.nextInt();
+		switch (input) {
+		case 1:
+			addContacts();break;
+		default: System.out.println("Enter Correct input");
+		}
 	}
 
 	public static void addContacts() {
 
+		
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Enter the Your FirstName: ");
 		String firstName = scan.nextLine();
